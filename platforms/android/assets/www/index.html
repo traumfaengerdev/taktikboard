@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+	Programmtitel: Taktikboard
+	Version: 0.0.1
+	Beschreibung: Diese WebApp ist ein Taktikboard für den Sport Ultimate Frisbee.
+							Das Taktikboard soll möglichst einfach gehalten werden.
+							Ein Ultimate Frisbee Spielfeld mit 2 Endzonen und an den Seiten jeweils einen Sideline Bereich wird angezeigt.
+	
+	Systemanforderungen: In den ersten Versionen wird die App speziell für das Entwickler-Smartphone (Samsung Galaxy Note 3 mit Android 5.0) ausgelegt.
+										Aufgrund der Verwendung von HTML5, CSS und JavaScript sollte die App jedoch in vielen Webbrowsern lauffähig sein.
+							
+	Ausblick:		  Später sollen Offensiv- und Defensiv Aufstellungen dargestellt werden können. Spieler sollen aus dem Sideline Bereichen auf das Feld geschoben werden können.
+							Aufstellungen sollen abgespeichert und zu einem späteren Zeitpunkt wieder geöffnet werden können.
+							Die WebApp soll auf möglichst vielen Endgeräten laufen und gleich aussehen.
+							
+	Autor:			  Christoph Hofmann
+	Kontakt:			traumfaengerdev@christoph-hofmann.net
+	Frisbee-Team:	Traumfänger zu Bremen, www.traumfaenger.tk
 -->
 <html>
     <head>
@@ -31,19 +31,62 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+    	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      
+	  <!-- Einbindung von Stylesheets --> 
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+		<!-- Metainformationen zur Seitenbeschreibung -->
+		<meta name="author" content="Christoph Hofmann">
+		<meta name="description" content="Taktikboard zur Unterstützung im Training und auf Turnieren">
+		
+		<!-- Seitentitel -->
+		<title>Ultimate Frisbee Taktikboard</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!-- Kopfbereich zum Anzeigen des Apptitels, später soll hier ein Banner eingefügt werden -->
+		<header>
+			<h1>
+				Ultimate Frisbee Taktikboard
+			</h1>
+		</header>
+		
+		<!-- Der Platz dient vor allem als übersichtlicher Rahmen für die Positionierung der verschiedenen Spielfeldabschnitte -->
+		<div id="platz">
+			
+			<!-- Der Platz wird zunächst grob Aufgeteilt in zwei Sideline-Bereiche und dem Spielfeld in der Mitte -->
+			<div id="sidelinelinks">
+			
+			</div><!-- Ende sidelinelinks -->
+			
+			<div id="spielfeld">
+			
+				<!-- Das Spielfeld unterteilt sich in zwei Zonen und dem Hauptfeld -->
+				<div id="zoneoben">
+			
+				</div><!-- Ende zoneoben -->
+				
+				<div id="hauptfeld">
+			
+				</div><!-- Ende hauptfeld -->
+				
+				<div id="zoneunten">
+			
+				</div><!-- Ende zoneunten -->
+				
+			</div><!-- Ende spielfeld -->
+			
+			<div id="sidelinerechts">
+			
+			</div><!-- Ende sidelinerechts -->
+			
+		</div> <!-- Ende platz -->
+		
+		<!-- Im Fussbereich der WebApp sollen später Steuerungselemente zum Öffnen und Speichern von Taktikaufstellungen eingeführt werden -->
+		<footer>
+			<p>
+				Hier kommt ein Auswahlmenü
+			</p>
+		</footer>
     </body>
 </html>
