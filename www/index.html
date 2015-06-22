@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
 <!--
 	Programmtitel: Taktikboard
-	Version: 0.0.2
+	Version: 0.0.3
 	Beschreibung: Diese WebApp ist ein Taktikboard für den Sport Ultimate Frisbee.
 							Das Taktikboard soll möglichst einfach gehalten werden.
 							Ein Ultimate Frisbee Spielfeld mit 2 Endzonen und an den Seiten jeweils einen Sideline Bereich wird angezeigt.
+							Im Sideline Bereich werden Offender und Defender angezeigt, diese lassen sich mit Maus und Touchscreen bewegen.
 							
-	Letzte Änderung: Erstellen des Spielfeldes in der Passenden Größe zur Handydarstellung
+	Letzte Änderung: Einfügen von Offender und Deffender, Bewegung am Touchscreen
 	
 	Systemanforderungen: In den ersten Versionen wird die App speziell für das Entwickler-Smartphone (Samsung Galaxy Note 3 mit Android 5.0) ausgelegt.
 										Aufgrund der Verwendung von HTML5, CSS und JavaScript sollte die App jedoch in vielen Webbrowsern lauffähig sein.
 							
-	Ausblick:		  Später sollen Offensiv- und Defensiv Aufstellungen dargestellt werden können. Spieler sollen aus dem Sideline Bereichen auf das Feld geschoben werden können.
+	Ausblick:		 
 							Aufstellungen sollen abgespeichert und zu einem späteren Zeitpunkt wieder geöffnet werden können.
 							Die WebApp soll auf möglichst vielen Endgeräten laufen und gleich aussehen.
 							
@@ -30,7 +31,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' 'unsafe-inline">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
     	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -44,20 +45,54 @@
 		
 		<!-- Seitentitel -->
 		<title>Ultimate Frisbee Taktikboard</title>
+		
+		<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery-ui.js"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		
     </head>
     <body>
-        <!-- Kopfbereich zum Anzeigen des Apptitels, später soll hier ein Banner eingefügt werden -->
+		<!-- Kopfbereich zum Anzeigen des Apptitels, später soll hier ein Banner eingefügt werden -->
 		<header>
 			<h1>
 				Ultimate Frisbee Taktikboard
-			</h1>
+			</h1>        
 		</header>
 		
 		<!-- Der Platz dient vor allem als übersichtlicher Rahmen für die Positionierung der verschiedenen Spielfeldabschnitte -->
 		<div id="platz">
+		
 			
 			<!-- Der Platz wird zunächst grob Aufgeteilt in zwei Sideline-Bereiche und dem Spielfeld in der Mitte -->
 			<div id="sidelinelinks">
+			<!-- Anzeige der Scheibe -->
+			<div id="disc"  class="ui-widget-content">
+			<!--<img class="dragme" src="img/disc.png" >-->
+			</div><!-- Ende disc -->
+			
+			<div id="off1" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			<div id="off2" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			
+		<div id="off3" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			<div id="off4" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			<div id="off5" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			<div id="off6" class="ui-widget-content">
+				<p>X</p>
+			</div>
+			
+		<div id="off7" class="ui-widget-content">
+				<p>X</p>
+			</div>
 			
 			</div><!-- Ende sidelinelinks -->
 			
@@ -69,7 +104,7 @@
 				</div><!-- Ende zoneoben -->
 				
 				<div id="hauptfeld">
-			
+					
 				</div><!-- Ende hauptfeld -->
 				
 				<div id="zoneunten">
@@ -79,7 +114,29 @@
 			</div><!-- Ende spielfeld -->
 			
 			<div id="sidelinerechts">
+			<div id="deff1" class="ui-widget-content">
+				<p>I</p>
+			</div>
+			<div id="deff2" class="ui-widget-content">
+				<p>I</p>
+			</div>
 			
+		<div id="deff3" class="ui-widget-content">
+				<p>I</p>
+			</div>
+			<div id="deff4" class="ui-widget-content">
+				<p>I</p>
+			</div>
+			<div id="deff5" class="ui-widget-content">
+				<p>I</p>
+			</div>
+			<div id="deff6" class="ui-widget-content">
+				<p>I</p>
+			</div>
+			
+		<div id="deff7" class="ui-widget-content">
+				<p>I</p>
+			</div>
 			</div><!-- Ende sidelinerechts -->
 			
 		</div> <!-- Ende platz -->
@@ -90,5 +147,6 @@
 				Hier kommt ein Auswahlmenü
 			</p>
 		</footer>
+		<script language="javascript" type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
